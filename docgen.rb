@@ -5,20 +5,20 @@
 class Docgen < Formula
   desc ""
   homepage ""
-  version "0.0.0"
+  version "0.0.0-1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/lukeshay/docgen/releases/download/v0.0.0/docgen-mac-arm64.tar.gz"
-      sha256 "ac52d3e525c68c64023d465205b3534b06f21b92d7fd5217fa384e4ca4401e3a"
+    if Hardware::CPU.intel?
+      url "https://github.com/lukeshay/docgen/releases/download/v0.0.0-1/docgen-mac-x86_64.tar.gz"
+      sha256 "58e66506481a5d6185b4a0cf64579582fe5220ae7a06a5761f2165cde6e1408b"
 
       def install
         bin.install "docgen"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/docgen/releases/download/v0.0.0/docgen-mac-x86_64.tar.gz"
-      sha256 "e3e2a22e1115086f3cb2b378ed815b94f046b7c67388f439d9fa59640c8f87a7"
+    if Hardware::CPU.arm?
+      url "https://github.com/lukeshay/docgen/releases/download/v0.0.0-1/docgen-mac-arm64.tar.gz"
+      sha256 "8d173cb204ed2397c84a4e76846c3fa60b18d94ddfb2c96212302a6d200f31d2"
 
       def install
         bin.install "docgen"
@@ -27,17 +27,17 @@ class Docgen < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukeshay/docgen/releases/download/v0.0.0/docgen-linux-arm64.tar.gz"
-      sha256 "1cc58b050f1ff5e189f4de508bdd4bc5a789133ed426d0eca09f8da22e2c8847"
+    if Hardware::CPU.intel?
+      url "https://github.com/lukeshay/docgen/releases/download/v0.0.0-1/docgen-linux-x86_64.tar.gz"
+      sha256 "8eea53cae632ab87ed5b6f54fd08c6575b01f68b26fe8e1dba2292b93b705e19"
 
       def install
         bin.install "docgen"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/docgen/releases/download/v0.0.0/docgen-linux-x86_64.tar.gz"
-      sha256 "f2ee6d1ceaa05f2d87644a8ecc9adf8359af5abff294df3facf35a2c77b2c4ce"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lukeshay/docgen/releases/download/v0.0.0-1/docgen-linux-arm64.tar.gz"
+      sha256 "cb942f7816f607ae156716823f0e713265915452247e8ed63df4421bb870ae95"
 
       def install
         bin.install "docgen"
