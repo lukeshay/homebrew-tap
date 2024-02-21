@@ -9,17 +9,17 @@ class Gocden < Formula
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.1/gocden-mac-arm64.tar.gz"
-      sha256 "db57353e5787b97cbdd937c47976b5477185a1aa6fa1ef299250533ab1996b28"
+    if Hardware::CPU.intel?
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.1/gocden-mac-x86_64.tar.gz"
+      sha256 "d081f3c8f611a3b72a3616a054172c2bbc076c3bb13b0cb5689a8ae27b951b1e"
 
       def install
         bin.install "gocden"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.1/gocden-mac-x86_64.tar.gz"
-      sha256 "a2c7d3bde70828e3dd82658aec3057d5067a6427f59347d4a81366240baf0a74"
+    if Hardware::CPU.arm?
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.1/gocden-mac-arm64.tar.gz"
+      sha256 "217de44f77658c4ea266f1524360c828a9ffbdcfdaf7a41292ba1cbfcd856364"
 
       def install
         bin.install "gocden"
@@ -30,7 +30,7 @@ class Gocden < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/lukeshay/gocden/releases/download/v0.0.1/gocden-linux-arm64.tar.gz"
-      sha256 "36275a0fddee15f8e03de3b793a05e6bfb8f6f35915f266cc18bcb08a9707402"
+      sha256 "feaa8ce07a41ddf1993fc4e0563a8564e1cddda33c6eb25485c6ce6900a14ff1"
 
       def install
         bin.install "gocden"
@@ -38,7 +38,7 @@ class Gocden < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/lukeshay/gocden/releases/download/v0.0.1/gocden-linux-x86_64.tar.gz"
-      sha256 "1c8a26914c7802960935d949ec50544d85e0c90888f7ddc8f9427e29de775a1d"
+      sha256 "ff54bb656321e9b344534f4bf89412526d0b04cfd4add2d8fb3e6e55aac3eefb"
 
       def install
         bin.install "gocden"
