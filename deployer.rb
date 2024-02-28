@@ -5,21 +5,21 @@
 class Deployer < Formula
   desc "the deployer cli"
   homepage "https://github.com/lukeshay/deployer"
-  version "0.0.2"
+  version "0.0.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.2/deployer-mac-arm64.tar.gz"
-      sha256 "e253109f0669c8060e5433193da6eb3e600dab42f36d003c1d04734a93549e98"
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.3/deployer-mac-arm64.tar.gz"
+      sha256 "2bf9d143770fab91e62759a6dd852a214f3d83fa8641a8915b8e71ea940c59cf"
 
       def install
         bin.install "deployer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.2/deployer-mac-x86_64.tar.gz"
-      sha256 "f5b7e42a1c73b26ba7a9e04b702b3aea0d119431ce5dc78dd4f509fb47ec092d"
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.3/deployer-mac-x86_64.tar.gz"
+      sha256 "bffaa9e31a2c56e24556af5f87151abf6679339067b4d97d8d503f8d0fd6ef3d"
 
       def install
         bin.install "deployer"
@@ -29,16 +29,16 @@ class Deployer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.2/deployer-linux-arm64.tar.gz"
-      sha256 "264a6516a1eb740bd3aa8f5723f7fcffd4605d6dbd0e7bd4d60ad07a51f60864"
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.3/deployer-linux-arm64.tar.gz"
+      sha256 "2924f5e6f41d8cef1e37cc3d0b7675ed216eddd0f07810dfb615d4ace20196de"
 
       def install
         bin.install "deployer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.2/deployer-linux-x86_64.tar.gz"
-      sha256 "1c9a34602bd6c2e1b109b04e8307c9bedfa10a781cfde16a18d10719a09ad4e8"
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.3/deployer-linux-x86_64.tar.gz"
+      sha256 "ba69122129d507303338596566416bd8910fb884946f0dff343e845ee834cd0e"
 
       def install
         bin.install "deployer"
