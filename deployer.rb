@@ -5,21 +5,21 @@
 class Deployer < Formula
   desc "the deployer cli"
   homepage "https://github.com/lukeshay/deployer"
-  version "0.0.5"
+  version "0.0.6"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.5/deployer_darwin_arm64.tar.gz"
-      sha256 "25c3e86f344890fe7dbf8c7e4761acfbbf89d2b7e9edb6861bbad7bbe6029eff"
+    if Hardware::CPU.intel?
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.6/deployer_darwin_x86_64.tar.gz"
+      sha256 "6e7fefec6d4dd1ac7f7e224c5561941b78ada25b44bf8a8aefad29b9e79cbe6e"
 
       def install
         bin.install "deployer"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.5/deployer_darwin_x86_64.tar.gz"
-      sha256 "6ca93da67b6d5f4eb1824aff07a08bd995c5334c194d5abe0d4ae0bdcb1f1fa9"
+    if Hardware::CPU.arm?
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.6/deployer_darwin_arm64.tar.gz"
+      sha256 "ab5229f0d44e4d8f41e44f93f87cdd2048f9f281f7a9486351a7fe724bff8571"
 
       def install
         bin.install "deployer"
@@ -29,16 +29,16 @@ class Deployer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.5/deployer_linux_arm64.tar.gz"
-      sha256 "ea722f0899325fb78b259a7d88dd0c0710f28fba7d410b8c8750c8ed605187ff"
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.6/deployer_linux_arm64.tar.gz"
+      sha256 "48d71f610281e212e4ea0f4cc590863de50eb4e1841d78e1419f15397b11b9b0"
 
       def install
         bin.install "deployer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.5/deployer_linux_x86_64.tar.gz"
-      sha256 "10f725b2bcbaeb4ddd9262f2bca3f7392c913adc503f31b743a498bee6ce4686"
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.6/deployer_linux_x86_64.tar.gz"
+      sha256 "e9cb52acac5dcd9819dcee3a72776fa9b4b2cfb88911a253f92f682d1b90465c"
 
       def install
         bin.install "deployer"
