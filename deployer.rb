@@ -5,21 +5,21 @@
 class Deployer < Formula
   desc "the deployer cli"
   homepage "https://github.com/lukeshay/deployer"
-  version "0.0.6"
+  version "0.0.7"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.6/deployer_darwin_x86_64.tar.gz"
-      sha256 "6e7fefec6d4dd1ac7f7e224c5561941b78ada25b44bf8a8aefad29b9e79cbe6e"
+    if Hardware::CPU.arm?
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.7/deployer_darwin_arm64.tar.gz"
+      sha256 "82227af106a00dfa430a58680d9c3f4281e1e039ef6a6bd09b00ee3c7b3e74de"
 
       def install
         bin.install "deployer"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.6/deployer_darwin_arm64.tar.gz"
-      sha256 "ab5229f0d44e4d8f41e44f93f87cdd2048f9f281f7a9486351a7fe724bff8571"
+    if Hardware::CPU.intel?
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.7/deployer_darwin_x86_64.tar.gz"
+      sha256 "07469258ea8096b002e11b0bd10523304e7632f95f526e1de2d4db5b16388078"
 
       def install
         bin.install "deployer"
@@ -28,17 +28,17 @@ class Deployer < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.6/deployer_linux_arm64.tar.gz"
-      sha256 "48d71f610281e212e4ea0f4cc590863de50eb4e1841d78e1419f15397b11b9b0"
+    if Hardware::CPU.intel?
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.7/deployer_linux_x86_64.tar.gz"
+      sha256 "96b9a289f65db1e39ac25c04c7bfea9f5f1eb72e613555325e825f1184eb982a"
 
       def install
         bin.install "deployer"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/deployer/releases/download/v0.0.6/deployer_linux_x86_64.tar.gz"
-      sha256 "e9cb52acac5dcd9819dcee3a72776fa9b4b2cfb88911a253f92f682d1b90465c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lukeshay/deployer/releases/download/v0.0.7/deployer_linux_arm64.tar.gz"
+      sha256 "f39c63d21440c2f62b5ef58b8853d552b5fcafbe7f800e87bd863a9240d3b7fe"
 
       def install
         bin.install "deployer"
