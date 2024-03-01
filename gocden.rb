@@ -5,21 +5,21 @@
 class Gocden < Formula
   desc "the gocden cli"
   homepage "https://github.com/lukeshay/gocden"
-  version "0.0.3"
+  version "0.0.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.3/gocden-mac-arm64.tar.gz"
-      sha256 "f7cc33eca9d2a4fbc1e29c301168cd621a5b6bad81fdea234319e73c3e98de6e"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.4/deployer_darwin_arm64.tar.gz"
+      sha256 "54a41efe5b2a6f22bc2e007d63d27966a35b9e9898441322a44494c8286dcc07"
 
       def install
         bin.install "gocden"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.3/gocden-mac-x86_64.tar.gz"
-      sha256 "f3684d8d9e48f1e06e3b0f60c87d516195acde7bf96a5bbffd37bbb4f985e56a"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.4/deployer_darwin_x86_64.tar.gz"
+      sha256 "89c35bfee9b3d516f016a0bbcbe2f64df77fcfb4f73938d86580c6cff401959d"
 
       def install
         bin.install "gocden"
@@ -29,16 +29,16 @@ class Gocden < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.3/gocden-linux-arm64.tar.gz"
-      sha256 "d0bb26809790c89425f1bf164c9ce168d49e22a565c8a466b4b5d64f225a08cf"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.4/deployer_linux_arm64.tar.gz"
+      sha256 "b3dc720a6c128795e6b7918981418c6944de18fed10105da1db290c70405f793"
 
       def install
         bin.install "gocden"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.3/gocden-linux-x86_64.tar.gz"
-      sha256 "0f046db987a042eb5eaa9c7c74634c4a989c26909f2f446ca4c283b175b18db8"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.4/deployer_linux_x86_64.tar.gz"
+      sha256 "a12ef6d42c1a216f41a0787ec29bb0d6afce83702b705b2e7c79ee93a23530c2"
 
       def install
         bin.install "gocden"
