@@ -5,21 +5,21 @@
 class Gocden < Formula
   desc "the gocden cli"
   homepage "https://github.com/lukeshay/gocden"
-  version "0.0.4"
+  version "0.0.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.4/deployer_darwin_arm64.tar.gz"
-      sha256 "54a41efe5b2a6f22bc2e007d63d27966a35b9e9898441322a44494c8286dcc07"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.5/deployer_darwin_arm64.tar.gz"
+      sha256 "098eb71ac144b2e58d31d2a354b458532522dfaa0d247e39cb7e077c57e34a0f"
 
       def install
         bin.install "gocden"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.4/deployer_darwin_x86_64.tar.gz"
-      sha256 "89c35bfee9b3d516f016a0bbcbe2f64df77fcfb4f73938d86580c6cff401959d"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.5/deployer_darwin_x86_64.tar.gz"
+      sha256 "1325c7a4f6c3c029d71ccced4d9756e67b53dd7bf160f829fa46a5af6e68d2e2"
 
       def install
         bin.install "gocden"
@@ -29,16 +29,16 @@ class Gocden < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.4/deployer_linux_arm64.tar.gz"
-      sha256 "b3dc720a6c128795e6b7918981418c6944de18fed10105da1db290c70405f793"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.5/deployer_linux_arm64.tar.gz"
+      sha256 "da0e62333accf8a540b78d9a0ec83347ccc496a86cc4c0c7ea440c4a1b2e4e01"
 
       def install
         bin.install "gocden"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.4/deployer_linux_x86_64.tar.gz"
-      sha256 "a12ef6d42c1a216f41a0787ec29bb0d6afce83702b705b2e7c79ee93a23530c2"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.5/deployer_linux_x86_64.tar.gz"
+      sha256 "cdde1d607eaddc9d5f23b1cced1427d500ef95bb8ece9f9bcc0712694b710349"
 
       def install
         bin.install "gocden"
