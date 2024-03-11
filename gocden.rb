@@ -5,21 +5,21 @@
 class Gocden < Formula
   desc "the gocden cli"
   homepage "https://github.com/lukeshay/gocden"
-  version "0.0.7"
+  version "0.0.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.7/deployer_darwin_arm64.tar.gz"
-      sha256 "aea3bd69978401c1f04342d172ac4bcbd3d98b18941a78800ce4d84480507392"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.8/deployer_darwin_arm64.tar.gz"
+      sha256 "68cdcf3cb91d0e2fcc84a6405a23abf62f1779749ee9870fc6c22f1247a62799"
 
       def install
         bin.install "gocden"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.7/deployer_darwin_x86_64.tar.gz"
-      sha256 "92d5e2170426fdc6eda5aa4414a127faadc02acec8408301f6ea0cf4dcbdaffa"
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.8/deployer_darwin_x86_64.tar.gz"
+      sha256 "3e90f2c778e1ac80a89c9e808cc72e8514ca4ebe5f3239c23d6bfa8973519727"
 
       def install
         bin.install "gocden"
@@ -28,17 +28,17 @@ class Gocden < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.7/deployer_linux_x86_64.tar.gz"
-      sha256 "3dd0bc8f43cc7fbfb596b7d9fe7c73685f2297a9e33c9242369868aeb17eed98"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.8/deployer_linux_arm64.tar.gz"
+      sha256 "fd4497bac51ea17fd0bd4fe6937e5bbeff4bda15961a7cc5f4e56de008b2ce98"
 
       def install
         bin.install "gocden"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukeshay/gocden/releases/download/v0.0.7/deployer_linux_arm64.tar.gz"
-      sha256 "81024edbf27b85371cf52e7338c320842c92e5ac0afb2c87a09c34f135dc0390"
+    if Hardware::CPU.intel?
+      url "https://github.com/lukeshay/gocden/releases/download/v0.0.8/deployer_linux_x86_64.tar.gz"
+      sha256 "3f4eb6b2dfb511b4e9e162c57149c98655d6e779e36f8af4f617cb136dbe3d0d"
 
       def install
         bin.install "gocden"
